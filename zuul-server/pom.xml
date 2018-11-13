@@ -71,8 +71,9 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.0</version>
                 <configuration>
-                    <dockerHost>https://192.168.99.101:2376</dockerHost>
-                    <dockerCertPath>/Users/heidsoft/.docker/machine/machines/default</dockerCertPath>
+                    <dockerDirectory>
+                        /
+                    </dockerDirectory>
                     <imageName>${project.artifactId}</imageName>
                     <baseImage>java:8</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>

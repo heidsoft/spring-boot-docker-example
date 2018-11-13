@@ -79,8 +79,6 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.0</version>
                 <configuration>
-                    <dockerHost>tcp://192.168.99.101:2376</dockerHost>
-                    <dockerCertPath>/Users/heidsoft/.docker/machine/machines/default</dockerCertPath>
                     <imageName>${project.artifactId}</imageName>
                     <baseImage>java:8</baseImage>
                     <entryPoint>["java", "-jar", "/${project.build.finalName}.jar", "-Xdebug -Xrunjdwp:server=y,transport=dt_socket,suspend=n"]</entryPoint>
